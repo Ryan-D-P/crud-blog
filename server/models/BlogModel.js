@@ -11,7 +11,7 @@ const blogSchema = new mongoose.Schema({
     },
     images: [String],
     content: {
-        type: String,
+        type: [String],
         required: true
     }
 }, { timestamps: true });

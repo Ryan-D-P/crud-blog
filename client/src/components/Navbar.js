@@ -1,7 +1,7 @@
 const Navbar = () => {
     return (
         <header className="Navbar">
-            <h1>Navbar header</h1>
+            <h1>Optimus Princeps</h1>
         </header>
     );
 }
