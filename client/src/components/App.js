@@ -1,11 +1,16 @@
-import Home from "./Home";
+import { Routes, Route } from "react-router-dom";
+import Blogs from "./Blogs";
+import Blog from "./Blog";
 import Navbar from "./Navbar";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Home />
+      <Routes>
+        <Route path="/blogs" element={ <Blogs /> } />
+        <Route path="/blogs/:id" element={ <Blog /> } />
+      </Routes>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const Home = () => {
+const Blogs = () => {
     // Blogs state
     const [blogs, setBlogs] = useState([]);
 
@@ -16,26 +17,22 @@ const Home = () => {
     }, []);
 
     return (
-        <main className="Home">
+        <main className="Blogs">
             {
                 blogs.length > 0 ? blogs.map((blog) => (
-                    <div className="blog-container" key={ blog._id }>
-                        <div class="blog-header">
+                    <Link to={ `/blogs/${blog._id}` } className="blog-container" key={ blog._id }>
+                        <div className="blog-header">
                             <h2>{ blog.title }</h2>
                             <p className="blog-author">{ `Author: ${blog.author}` }</p>
                         </div>
                         <div className="blog-body">
-                            {
-                                blog.content.map((paragraph) => (
-                                    <p>{ paragraph }</p>
-                                ))
-                            }
+                            <p>{ `${blog.content[0].slice(0, 200).trim()}...` }</p>
                         </div>
-                    </div>
+                    </Link>
                 )) : null
             }
         </main>
     );
 }
  
-export default Home;
+export default Blogs;

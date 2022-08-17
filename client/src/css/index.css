@@ -30,6 +30,11 @@ p {
   font-size: 1.6rem;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .Navbar {
   background-color: hsl(0, 100%, 50%);
   padding: 2rem;
@@ -40,11 +45,10 @@ p {
   color: hsl(52, 100%, 50%);
 }
 
-.Home {
+.Blogs {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 3rem;
+  padding: 5rem 3rem;
 }
 
 .blog-container, .blog-header, .blog-body {
@@ -55,16 +59,14 @@ p {
 .blog-container {
   background-color: hsl(0, 0%, 100%);
   gap: 30px;
-  width: 1100px;
-  padding: 3rem 6rem;
+  width: 400px;
+  height: 275px;
+  padding: 3rem 2rem;
   box-shadow: 0px 0px 5px hsl(0, 0%, 0%);
 }
 
-.blog-header {
-  gap: 20px;
-}
 
-.blog-body {
+.blog-header, .blog-body {
   gap: 20px;
 }
 
