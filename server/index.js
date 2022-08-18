@@ -14,6 +14,13 @@ app.get("/", async (req, res) => {
     res.status(200).json(blogs);
 });
 
+app.get("/:id", async (req, res) => {
+    // Get blog matching ID from the blog collection in the db
+    const blog = await Blog.find({ _id: req.params.id });
+    // Send the blogs as the response
+    res.status(200).json(blog);
+});
+
 app.post("/", (req, res) => {
     // Body of incoming POST request
     const {title, author, content} = req.body;

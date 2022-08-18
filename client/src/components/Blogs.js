@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import '../css/Blogs.css';
 
 const Blogs = () => {
     // Blogs state
@@ -17,7 +18,7 @@ const Blogs = () => {
     }, []);
 
     return (
-        <main className="Blogs">
+        <div className="Blogs">
             {
                 blogs.length > 0 ? blogs.map((blog) => (
                     <Link to={ `/blogs/${blog._id}` } className="blog-container" key={ blog._id }>
@@ -31,7 +32,7 @@ const Blogs = () => {
                     </Link>
                 )) : null
             }
-        </main>
+        </div>
     );
 }
  

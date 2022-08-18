@@ -1,0 +1,17 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    padding: 2rem;
+}
+
+.blogs-link {
+    color: blue;
+    width: 200px;
+    height: 100px;
+}
+
+.blogs-link > p {
+    font-size: 3rem;
+    font-weight: 700;
+}

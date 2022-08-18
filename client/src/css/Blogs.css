@@ -1,0 +1,28 @@
+.Blogs {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 3rem;
+}
+  
+.blog-container, .blog-header, .blog-body {
+    display: flex;
+    flex-direction: column;
+}
+  
+.blog-container {
+    background-color: hsl(0, 0%, 100%);
+    gap: 30px;
+    width: 400px;
+    height: 275px;
+    padding: 3rem 2rem;
+    box-shadow: 0px 0px 5px hsl(0, 0%, 0%);
+}
+
+
+.blog-header, .blog-body {
+   gap: 20px;
+}
+
+.blog-author {
+    font-weight: bold;
+}
